@@ -15,6 +15,9 @@
 		040C44B81E4C1B1300F64EE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040C44B61E4C1B1300F64EE0 /* LaunchScreen.storyboard */; };
 		040C44C31E4C1B1300F64EE0 /* TestTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C44C21E4C1B1300F64EE0 /* TestTableViewTests.m */; };
 		040C44CE1E4C1B1300F64EE0 /* TestTableViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C44CD1E4C1B1300F64EE0 /* TestTableViewUITests.m */; };
+		040C44DD1E4C1B9F00F64EE0 /* UIView+BSHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C44DC1E4C1B9F00F64EE0 /* UIView+BSHelper.m */; };
+		040C44E01E4C1C4B00F64EE0 /* TestTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C44DF1E4C1C4B00F64EE0 /* TestTableView.m */; };
+		040C44E31E4C3C3E00F64EE0 /* WCTestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 040C44E21E4C3C3E00F64EE0 /* WCTestTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		040C44C91E4C1B1300F64EE0 /* TestTableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		040C44CD1E4C1B1300F64EE0 /* TestTableViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewUITests.m; sourceTree = "<group>"; };
 		040C44CF1E4C1B1300F64EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040C44DB1E4C1B9F00F64EE0 /* UIView+BSHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSHelper.h"; sourceTree = "<group>"; };
+		040C44DC1E4C1B9F00F64EE0 /* UIView+BSHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSHelper.m"; sourceTree = "<group>"; };
+		040C44DE1E4C1C4B00F64EE0 /* TestTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableView.h; sourceTree = "<group>"; };
+		040C44DF1E4C1C4B00F64EE0 /* TestTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableView.m; sourceTree = "<group>"; };
+		040C44E11E4C3C3E00F64EE0 /* WCTestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCTestTableViewCell.h; sourceTree = "<group>"; };
+		040C44E21E4C3C3E00F64EE0 /* WCTestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCTestTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,8 @@
 		040C44A71E4C1B1300F64EE0 /* TestTableView */ = {
 			isa = PBXGroup;
 			children = (
+				040C44DB1E4C1B9F00F64EE0 /* UIView+BSHelper.h */,
+				040C44DC1E4C1B9F00F64EE0 /* UIView+BSHelper.m */,
 				040C44AB1E4C1B1300F64EE0 /* AppDelegate.h */,
 				040C44AC1E4C1B1300F64EE0 /* AppDelegate.m */,
 				040C44AE1E4C1B1300F64EE0 /* ViewController.h */,
@@ -110,6 +121,10 @@
 				040C44B61E4C1B1300F64EE0 /* LaunchScreen.storyboard */,
 				040C44B91E4C1B1300F64EE0 /* Info.plist */,
 				040C44A81E4C1B1300F64EE0 /* Supporting Files */,
+				040C44DE1E4C1C4B00F64EE0 /* TestTableView.h */,
+				040C44DF1E4C1C4B00F64EE0 /* TestTableView.m */,
+				040C44E11E4C3C3E00F64EE0 /* WCTestTableViewCell.h */,
+				040C44E21E4C3C3E00F64EE0 /* WCTestTableViewCell.m */,
 			);
 			path = TestTableView;
 			sourceTree = "<group>";
@@ -276,7 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040C44E01E4C1C4B00F64EE0 /* TestTableView.m in Sources */,
+				040C44E31E4C3C3E00F64EE0 /* WCTestTableViewCell.m in Sources */,
 				040C44B01E4C1B1300F64EE0 /* ViewController.m in Sources */,
+				040C44DD1E4C1B9F00F64EE0 /* UIView+BSHelper.m in Sources */,
 				040C44AD1E4C1B1300F64EE0 /* AppDelegate.m in Sources */,
 				040C44AA1E4C1B1300F64EE0 /* main.m in Sources */,
 			);

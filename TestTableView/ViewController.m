@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "TestTableView.h"
+#import "UIView+BSHelper.h"
 
 @interface ViewController ()
 
@@ -16,6 +18,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSArray *array = @[@"aaa",@"bbb"];
+    
+    TestTableView *test = [[TestTableView alloc] initWithFrame:CGRectMake(0, 0, 500, 500) cellClassName:@"WCTestTableViewCell" dataArray:[NSMutableArray arrayWithArray:array]];
+    [self.view addSubview:test];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
