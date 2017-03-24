@@ -21,7 +21,7 @@
     
     NSArray *array = @[@"aaa",@"bbb"];
     
-    TestTableView *test = [[TestTableView alloc] initWithFrame:CGRectMake(0, 0, 500, 500) cellClassName:@"WCTestTableViewCell" dataArray:[NSMutableArray arrayWithArray:array]];
+    TestTableView *test = [[TestTableView alloc] initWithFrame:CGRectMake(0, 0, 500, 500) cellClassName:@"WCTestTableViewCell" dataArray:[NSMutableArray arrayWithArray:array] updateFunctionKeyWord:@"update"];
     [self.view addSubview:test];
     // Do any additional setup after loading the view, typically from a nib.
 }

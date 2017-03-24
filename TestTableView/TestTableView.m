@@ -17,11 +17,13 @@
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
+@property (nonatomic, strong) NSString *updateKeyWords;
+
 @end
 
 @implementation TestTableView
 
--(id)initWithFrame:(CGRect)frame cellClassName:(NSString *)cellClassName dataArray:(NSMutableArray *)dataArray
+-(id)initWithFrame:(CGRect)frame cellClassName:(NSString *)cellClassName dataArray:(NSMutableArray *)dataArray updateFunctionKeyWord:(NSString *)updateFunctionKeyWord;
 {
     if (self) {
         self = [super initWithFrame:frame];
@@ -31,6 +33,7 @@
         [self addSubview:_tab];
     }
     self.dataArray = dataArray;
+    self.updateKeyWords = updateFunctionKeyWord;
     self.cellClassName = cellClassName;
     return self;
 }
@@ -47,10 +50,28 @@
     if (cell == nil) {
         cell = [[cellClass alloc] init];
     }
-//    [TestTableView LogAllMethodsFromClass:cell];
-    [cell performSelector:@selector(updateCellWith:) withObject:_dataArray[indexPath.row] afterDelay:0];
+    NSArray *array = [self fetchMethodList:cellClass];
+    for (int i = 0; i < array.count; i ++) {
+        NSString *str = array[i];
+        if ([str hasPrefix:self.updateKeyWords]) {
+            [cell performSelector:NSSelectorFromString(str) withObject:_dataArray[indexPath.row] afterDelay:0];
+        }
+    }
     return cell;
 }
+
+- (NSArray *)fetchMethodList:(Class)class {
+    unsigned int count = 0;
+    Method *methodList = class_copyMethodList(class, &count);
+    
+    NSMutableArray *mutableList = [NSMutableArray arrayWithCapacity:count];
+    for (unsigned int i = 0; i < count; i++ ) {
+        Method method = methodList[i];
+        SEL methodName = method_getName(method);
+        [mutableList addObject:NSStringFromSelector(methodName)];
+    }
+    free(methodList);
+    return [NSArray arrayWithArray:mutableList];}
 
 //+ (void)LogAllMethodsFromClass:(id)obj
 //{

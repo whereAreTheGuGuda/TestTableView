@@ -10,4 +10,6 @@
 
 @interface WCTestTableViewCell : UITableViewCell
 
+-(void)updateCellWith:(NSString *)title;
+
 @end
